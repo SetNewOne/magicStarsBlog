@@ -1,3 +1,16 @@
 import comp from "E:/myblog/docs/.vuepress/.temp/pages/en/index.html.vue"
-const data = JSON.parse("{\"path\":\"/en/\",\"title\":\"Home\",\"lang\":\"zh-CN\",\"frontmatter\":{\"home\":true,\"title\":\"Home\",\"icon\":\"home\",\"heroImage\":\"/images/hero.svg\",\"heroText\":\"My Tech Blog\",\"tagline\":\"Frontend | Backend | AI\",\"actions\":[{\"text\":\"Start Reading →\",\"link\":\"/en/frontend/\",\"type\":\"primary\"},{\"text\":\"About Me\",\"link\":\"/en/about/\",\"type\":\"secondary\"}],\"features\":[{\"title\":\"Frontend Development\",\"icon\":\"front\",\"details\":\"HTML, CSS, JavaScript - from basics to advanced\",\"link\":\"/en/frontend/\"},{\"title\":\"Backend Development\",\"icon\":\"back\",\"details\":\"Java, Python - server-side development skills\",\"link\":\"/en/backend/\"},{\"title\":\"Artificial Intelligence\",\"icon\":\"ai\",\"details\":\"Explore OpenCode AI tool usage\",\"link\":\"/en/ai/\"},{\"title\":\"Tech Blog\",\"icon\":\"blog\",\"details\":\"Learning notes and technical articles\",\"link\":\"/en/posts/\"}],\"footer\":\"MIT Licensed | Copyright © 2024-present\"},\"git\":{},\"readingTime\":{\"minutes\":0.46,\"words\":139},\"filePathRelative\":\"en/README.md\"}")
+const data = JSON.parse("{\"path\":\"/en/\",\"title\":\"Home\",\"lang\":\"en-US\",\"frontmatter\":{\"home\":true,\"title\":\"Home\",\"icon\":\"home\",\"heroImage\":\"/images/hero.svg\",\"heroText\":\"My Tech Blog\",\"tagline\":\"Frontend | Backend | AI\",\"actions\":[{\"text\":\"Start Reading →\",\"link\":\"/en/frontend/\",\"type\":\"primary\"},{\"text\":\"About Me\",\"link\":\"/en/about/\",\"type\":\"secondary\"}],\"features\":[{\"title\":\"Frontend Development\",\"icon\":\"front\",\"details\":\"HTML, CSS, JavaScript - from basics to advanced\",\"link\":\"/en/frontend/\"},{\"title\":\"Backend Development\",\"icon\":\"back\",\"details\":\"Java, Python - server-side development skills\",\"link\":\"/en/backend/\"},{\"title\":\"Artificial Intelligence\",\"icon\":\"ai\",\"details\":\"Explore OpenCode AI tool usage\",\"link\":\"/en/ai/\"},{\"title\":\"Tech Blog\",\"icon\":\"blog\",\"details\":\"Learning notes and technical articles\",\"link\":\"/en/posts/\"}],\"footer\":\"MIT Licensed | Copyright © 2024-present\"},\"readingTime\":{\"minutes\":0.46,\"words\":139},\"filePathRelative\":\"en/README.md\"}")
 export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}
