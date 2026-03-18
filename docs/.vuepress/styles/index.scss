@@ -1,0 +1,51 @@
+:root {
+  --home-hero-image: url("/images/hero-bg.svg");
+  --home-hero-theme-color: #2196f3;
+}
+
+.navbar {
+  backdrop-filter: blur(10px);
+}
+
+.sidebar {
+  backdrop-filter: blur(10px);
+}
+
+.page-meta {
+  padding: 0.5rem 0;
+}
+
+.vp-doc h1, .vp-doc h2, .vp-doc h3, .vp-doc h4, .vp-doc h5, .vp-doc h6 {
+  font-weight: 600;
+}
+
+.theme-hope-content {
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.custom-container.tip {
+  border-color: #42b983;
+}
+
+.custom-container.warning {
+  border-color: #e6a23c;
+}
+
+.custom-container.danger {
+  border-color: #f56c6c;
+}
+
+.code-block-wrapper {
+  border-radius: 8px;
+}
+
+.appearance-card {
+  border-radius: 12px;
+}
+
+@media (max-width: 719px) {
+  .theme-hope-content {
+    font-size: 16px;
+  }
+}

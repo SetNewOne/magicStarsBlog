@@ -1,0 +1,1 @@
+export const siteData = JSON.parse("{\"base\":\"/\",\"lang\":\"zh-CN\",\"title\":\"我的技术博客\",\"description\":\"前端、后端、AI 技术学习笔记\",\"head\":[[\"meta\",{\"name\":\"author\",\"content\":\"个人博客\"}],[\"meta\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]],\"locales\":{}}")
