@@ -10,18 +10,16 @@ heroImageStyle:
   border-radius: 12px
   box-shadow: 0 8px 32px rgba(102, 126, 234, 0.4)
 actions:
-  - text: 开始探索 →
+  - text: 🚀 开始阅读 →
     link: /zh/frontend/
     type: primary
-    icon: book
-  - text: 关于博主
+  - text: 👤 关于博主
     link: /zh/about/
     type: secondary
-    icon: person
 features:
-  - title: 🚀 前端开发
+  - title: 🎨 前端开发
     icon: front
-    details: 从零基础到实战，掌握 HTML、CSS、JavaScript，构建精美网页界面
+    details: HTML、CSS、JavaScript，从入门到实战，构建精美网页
     link: /zh/frontend/
 
   - title: ⚙️ 后端开发
@@ -31,23 +29,13 @@ features:
 
   - title: 🤖 人工智能
     icon: ai
-    details: 深度探索 OpenCode AI 编程助手，提升开发效率与智能化水平
+    details: 深度探索 OpenCode AI 编程助手，提升开发效率
     link: /zh/ai/
 
   - title: 📝 技术博客
     icon: blog
     details: 记录学习心得、分享项目经验、总结技术干货
     link: /zh/posts/
-
-  - title: 💡 实战项目
-    icon: light
-    details: 将理论知识转化为实际项目，积累项目开发经验
-    link: https://github.com/SetNewOne/magicStarsBlog
-
-  - title: 🌟 交流反馈
-    icon: community
-    details: 欢迎提出建议和反馈，与志同道合的开发者共同成长
-    link: /zh/about/
 
 footer: MIT Licensed | Copyright © 2024-present 魔法星博客
 copyright: false
@@ -62,15 +50,30 @@ copyright: false
 }
 </style>
 
-## 🌟 欢迎来到魔法星技术博客
+## 🔥 必看
 
-> **"代码改变世界，学习成就未来"**
+> 快速通道，点击直接跳转
 
-这是一个专注于 **Web全栈开发** 与 **人工智能** 的技术学习平台。无论你是初学者还是有经验的开发者，这里都能为你提供有价值的知识资源。
+<div class="banner">
+  <div class="banner-item" onclick="location.href='/zh/frontend/'">
+    <span class="banner-icon">🎨</span>
+    <span class="banner-text">前端入门</span>
+  </div>
+  <div class="banner-item" onclick="location.href='/zh/backend/'">
+    <span class="banner-icon">⚙️</span>
+    <span class="banner-text">后端入门</span>
+  </div>
+  <div class="banner-item" onclick="location.href='/zh/ai/'">
+    <span class="banner-icon">🤖</span>
+    <span class="banner-text">AI 助手</span>
+  </div>
+  <div class="banner-item" onclick="location.href='/zh/posts/'">
+    <span class="banner-icon">📝</span>
+    <span class="banner-text">博客文章</span>
+  </div>
+</div>
 
----
-
-## 📖 学习路线
+## 📚 学习路线
 
 | 方向 | 路线 | 目标 |
 |:---:|:---|:---|
@@ -80,7 +83,7 @@ copyright: false
 
 ---
 
-## 🚀 快速开始
+## 📖 快速开始
 
 ```bash
 # 克隆博客源码
@@ -108,4 +111,37 @@ npm run dev
 
 ---
 
-> 💬 **温馨提示**：如有内容错误或建议，欢迎提交 Issue 或 Pull Request！
+> 💬 **温馨提示**：按 `Ctrl+K` 快速搜索文章内容
+
+<style>
+.banner {
+  display: flex;
+  gap: 16px;
+  margin: 24px 0;
+  flex-wrap: wrap;
+}
+.banner-item {
+  flex: 1;
+  min-width: 120px;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: white;
+}
+.banner-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+}
+.banner-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 8px;
+}
+.banner-text {
+  font-size: 1rem;
+  font-weight: 600;
+}
+</style>

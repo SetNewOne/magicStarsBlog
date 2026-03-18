@@ -1,10 +1,26 @@
-<template><div><h2 id="🌟-欢迎来到魔法星技术博客" tabindex="-1"><a class="header-anchor" href="#🌟-欢迎来到魔法星技术博客"><span>🌟 欢迎来到魔法星技术博客</span></a></h2>
+<template><div><h2 id="🔥-必看" tabindex="-1"><a class="header-anchor" href="#🔥-必看"><span>🔥 必看</span></a></h2>
 <blockquote>
-<p><strong>&quot;代码改变世界，学习成就未来&quot;</strong></p>
+<p>快速通道，点击直接跳转</p>
 </blockquote>
-<p>这是一个专注于 <strong>Web全栈开发</strong> 与 <strong>人工智能</strong> 的技术学习平台。无论你是初学者还是有经验的开发者，这里都能为你提供有价值的知识资源。</p>
-<hr>
-<h2 id="📖-学习路线" tabindex="-1"><a class="header-anchor" href="#📖-学习路线"><span>📖 学习路线</span></a></h2>
+<div class="banner">
+  <div class="banner-item" onclick="location.href='/zh/frontend/'">
+    <span class="banner-icon">🎨</span>
+    <span class="banner-text">前端入门</span>
+  </div>
+  <div class="banner-item" onclick="location.href='/zh/backend/'">
+    <span class="banner-icon">⚙️</span>
+    <span class="banner-text">后端入门</span>
+  </div>
+  <div class="banner-item" onclick="location.href='/zh/ai/'">
+    <span class="banner-icon">🤖</span>
+    <span class="banner-text">AI 助手</span>
+  </div>
+  <div class="banner-item" onclick="location.href='/zh/posts/'">
+    <span class="banner-icon">📝</span>
+    <span class="banner-text">博客文章</span>
+  </div>
+</div>
+<h2 id="📚-学习路线" tabindex="-1"><a class="header-anchor" href="#📚-学习路线"><span>📚 学习路线</span></a></h2>
 <table>
 <thead>
 <tr>
@@ -32,7 +48,7 @@
 </tbody>
 </table>
 <hr>
-<h2 id="🚀-快速开始" tabindex="-1"><a class="header-anchor" href="#🚀-快速开始"><span>🚀 快速开始</span></a></h2>
+<h2 id="📖-快速开始" tabindex="-1"><a class="header-anchor" href="#📖-快速开始"><span>📖 快速开始</span></a></h2>
 <div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code" v-pre=""><code class="language-bash"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 克隆博客源码</span></span>
 <span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">git</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> clone</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> https://github.com/SetNewOne/magicStarsBlog.git</span></span>
 <span class="line"></span>
@@ -54,7 +70,7 @@
 </ul>
 <hr>
 <blockquote>
-<p>💬 <strong>温馨提示</strong>：如有内容错误或建议，欢迎提交 Issue 或 Pull Request！</p>
+<p>💬 <strong>温馨提示</strong>：按 <code v-pre>Ctrl+K</code> 快速搜索文章内容</p>
 </blockquote>
 </div></template>
 
@@ -66,5 +82,37 @@
 }
 .hero .hero-subtitle {
   font-size: 1.5rem !important;
+}
+</style>
+<style>
+.banner {
+  display: flex;
+  gap: 16px;
+  margin: 24px 0;
+  flex-wrap: wrap;
+}
+.banner-item {
+  flex: 1;
+  min-width: 120px;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: white;
+}
+.banner-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+}
+.banner-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 8px;
+}
+.banner-text {
+  font-size: 1rem;
+  font-weight: 600;
 }
 </style>

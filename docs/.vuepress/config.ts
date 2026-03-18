@@ -9,6 +9,7 @@ export default defineUserConfig({
   head: [
     ["meta", { name: "author", content: "魔法星" }],
     ["meta", { name: "viewport", content: "width=device-width, initial-scale=1" }],
+    ["link", { rel: "icon", href: "/favicon.ico" }],
   ],
   bundler: viteBundler(),
   dest: ".vuepress/dist",
@@ -29,57 +30,61 @@ export default defineUserConfig({
     repo: "https://github.com/SetNewOne/magicStarsBlog",
     docsDir: "docs",
     lastUpdated: true,
-    pure: false,
     displayFooter: true,
+    colorMode: "auto",
+    colorModeSwitch: true,
+    // 搜索功能
     searchPro: {
       hotKeys: ["k"],
       maxSuggestions: 10,
+      language: "zh",
     },
+    // 导航栏配置
     navbar: [
       {
-        text: "首页",
+        text: "🏠 首页",
         link: "/zh/",
-        icon: "home",
       },
       {
-        text: "前端开发",
+        text: "🎨 前端",
         icon: "front",
         link: "/zh/frontend/",
       },
       {
-        text: "后端开发",
+        text: "⚙️ 后端",
         icon: "back",
         link: "/zh/backend/",
       },
       {
-        text: "人工智能",
+        text: "🤖 AI",
         icon: "ai",
         link: "/zh/ai/",
       },
       {
-        text: "博客文章",
+        text: "📝 博客",
         icon: "blog",
         link: "/zh/posts/",
       },
       {
-        text: "关于",
+        text: "👤 关于",
         icon: "person",
         link: "/zh/about/",
       },
       {
-        text: "English",
+        text: "🌐 English",
         link: "/en/",
-        icon: "language",
       },
     ],
+    // 侧边栏配置
     sidebar: {
+      // 前端模块
       "/zh/frontend/": [
         {
-          text: "前端开发",
+          text: "🎨 前端开发",
           icon: "front",
           collapsible: false,
           children: [
-            ["/zh/frontend/README.md", "概述"],
+            ["/zh/frontend/README.md", "📖 概述"],
             "/zh/frontend/html/",
             "/zh/frontend/css/",
             "/zh/frontend/javascript/",
@@ -127,13 +132,14 @@ export default defineUserConfig({
           ],
         },
       ],
+      // 后端模块
       "/zh/backend/": [
         {
-          text: "后端开发",
+          text: "⚙️ 后端开发",
           icon: "back",
           collapsible: false,
           children: [
-            ["/zh/backend/README.md", "概述"],
+            ["/zh/backend/README.md", "📖 概述"],
             "/zh/backend/java/",
             "/zh/backend/python/",
           ],
@@ -165,13 +171,14 @@ export default defineUserConfig({
           ],
         },
       ],
+      // AI模块
       "/zh/ai/": [
         {
-          text: "人工智能",
+          text: "🤖 人工智能",
           icon: "ai",
           collapsible: false,
           children: [
-            ["/zh/ai/opencode/README.md", "概述"],
+            ["/zh/ai/opencode/README.md", "📖 概述"],
             "/zh/ai/opencode/",
           ],
         },
@@ -189,6 +196,7 @@ export default defineUserConfig({
           ],
         },
       ],
+      // 英文侧边栏
       "/en/": [
         {
           text: "English",
@@ -210,5 +218,24 @@ export default defineUserConfig({
         link: "https://github.com/SetNewOne/magicStarsBlog",
       },
     ],
+    // 页面增强配置
+    mdEnhance: {
+      align: true,
+      attrs: true,
+      container: true,
+      mark: true,
+      tasklist: true,
+      tabs: true,
+      footnote: true,
+      imageSize: true,
+      katex: true,
+      mathjax: true,
+      flowchart: true,
+      mermaid: true,
+      presentation: true,
+      sub: true,
+      sup: true,
+      vuePlayground: true,
+    },
   }),
 });
