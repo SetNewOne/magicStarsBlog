@@ -34,13 +34,6 @@ export default defineUserConfig({
     colorMode: "auto",
     colorModeSwitch: true,
     
-    // 搜索功能 - 使用主题内置
-    search: true,
-    searchPro: {
-      hotKeys: ["k"],
-    },
-    
-    // 导航栏配置 - 简化，去掉emoji
     navbar: [
       { text: "首页", link: "/zh/" },
       { text: "前端开发", link: "/zh/frontend/" },

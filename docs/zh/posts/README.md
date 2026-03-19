@@ -10,9 +10,7 @@ order: 10
 
 ## 最近更新
 
-- [我的第一篇博客](./first-post.md)
-- [Vue3 最佳实践](./vue3-best-practices.md)
-- [Python 异步编程](./python-async.md)
+暂无文章
 
 ## 分类
 
