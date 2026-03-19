@@ -1,8 +1,6 @@
 import { defineUserConfig } from "vuepress";
 import { hopeTheme } from "vuepress-theme-hope";
 import { viteBundler } from "@vuepress/bundler-vite";
-import { navbar } from "./config/navbar";
-import { sidebar } from "./config/sidebar";
 
 export default defineUserConfig({
   lang: "zh-CN",
@@ -36,8 +34,24 @@ export default defineUserConfig({
     colorMode: "auto",
     colorModeSwitch: true,
     
-    navbar,
-    sidebar,
+    navbar: {
+      "/zh/": [
+        { text: "首页", link: "/zh/" },
+        { text: "前端开发", link: "/zh/frontend/" },
+        { text: "后端开发", link: "/zh/backend/" },
+        { text: "人工智能", link: "/zh/ai/" },
+        { text: "博客文章", link: "/zh/posts/" },
+        { text: "关于博主", link: "/zh/about/" },
+      ],
+      "/en/": [
+        { text: "Home", link: "/en/" },
+        { text: "Frontend", link: "/en/frontend/" },
+        { text: "Backend", link: "/en/backend/" },
+        { text: "AI", link: "/en/ai/" },
+        { text: "About", link: "/en/about/" },
+      ],
+    },
+    sidebar: {
       "/zh/frontend/": [
         {
           text: "前端开发",
@@ -145,6 +159,17 @@ export default defineUserConfig({
           ],
         },
       ],
+      "/en/": [
+        {
+          text: "English",
+          collapsible: false,
+          children: [
+            ["/en/README.md", "Home"],
+            ["/en/frontend/README.md", "Frontend"],
+          ],
+        },
+      ],
+    },
     footer: "MIT Licensed | Copyright © 2024-present 魔法星博客",
     socialLinks: [
       { icon: "github", link: "https://github.com/SetNewOne/magicStarsBlog" },
