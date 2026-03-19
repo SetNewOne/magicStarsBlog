@@ -33,58 +33,32 @@ export default defineUserConfig({
     displayFooter: true,
     colorMode: "auto",
     colorModeSwitch: true,
-    // 搜索功能
+    
+    // 搜索功能 - 使用主题内置
+    search: true,
     searchPro: {
       hotKeys: ["k"],
-      maxSuggestions: 10,
-      language: "zh",
     },
-    // 导航栏配置
+    
+    // 导航栏配置 - 简化，去掉emoji
     navbar: [
-      {
-        text: "🏠 首页",
-        link: "/zh/",
-      },
-      {
-        text: "🎨 前端",
-        icon: "front",
-        link: "/zh/frontend/",
-      },
-      {
-        text: "⚙️ 后端",
-        icon: "back",
-        link: "/zh/backend/",
-      },
-      {
-        text: "🤖 AI",
-        icon: "ai",
-        link: "/zh/ai/",
-      },
-      {
-        text: "📝 博客",
-        icon: "blog",
-        link: "/zh/posts/",
-      },
-      {
-        text: "👤 关于",
-        icon: "person",
-        link: "/zh/about/",
-      },
-      {
-        text: "🌐 English",
-        link: "/en/",
-      },
+      { text: "首页", link: "/zh/" },
+      { text: "前端开发", link: "/zh/frontend/" },
+      { text: "后端开发", link: "/zh/backend/" },
+      { text: "人工智能", link: "/zh/ai/" },
+      { text: "博客文章", link: "/zh/posts/" },
+      { text: "关于博主", link: "/zh/about/" },
+      { text: "English", link: "/en/" },
     ],
+    
     // 侧边栏配置
     sidebar: {
-      // 前端模块
       "/zh/frontend/": [
         {
-          text: "🎨 前端开发",
-          icon: "front",
+          text: "前端开发",
           collapsible: false,
           children: [
-            ["/zh/frontend/README.md", "📖 概述"],
+            ["/zh/frontend/README.md", "概述"],
             "/zh/frontend/html/",
             "/zh/frontend/css/",
             "/zh/frontend/javascript/",
@@ -94,7 +68,6 @@ export default defineUserConfig({
       "/zh/frontend/html/": [
         {
           text: "HTML",
-          icon: "html",
           children: [
             ["/zh/frontend/html/README.md", "HTML 入门"],
             ["/zh/frontend/html/basic-tags.md", "基础标签"],
@@ -106,7 +79,6 @@ export default defineUserConfig({
       "/zh/frontend/css/": [
         {
           text: "CSS",
-          icon: "css",
           children: [
             ["/zh/frontend/css/README.md", "CSS 入门"],
             ["/zh/frontend/css/selectors.md", "选择器"],
@@ -120,7 +92,6 @@ export default defineUserConfig({
       "/zh/frontend/javascript/": [
         {
           text: "JavaScript",
-          icon: "js",
           children: [
             ["/zh/frontend/javascript/README.md", "JavaScript 入门"],
             ["/zh/frontend/javascript/basics.md", "基础语法"],
@@ -132,14 +103,12 @@ export default defineUserConfig({
           ],
         },
       ],
-      // 后端模块
       "/zh/backend/": [
         {
-          text: "⚙️ 后端开发",
-          icon: "back",
+          text: "后端开发",
           collapsible: false,
           children: [
-            ["/zh/backend/README.md", "📖 概述"],
+            ["/zh/backend/README.md", "概述"],
             "/zh/backend/java/",
             "/zh/backend/python/",
           ],
@@ -148,7 +117,6 @@ export default defineUserConfig({
       "/zh/backend/java/": [
         {
           text: "Java",
-          icon: "java",
           children: [
             ["/zh/backend/java/README.md", "Java 入门"],
             ["/zh/backend/java/basics.md", "基础语法"],
@@ -161,7 +129,6 @@ export default defineUserConfig({
       "/zh/backend/python/": [
         {
           text: "Python",
-          icon: "python",
           children: [
             ["/zh/backend/python/README.md", "Python 入门"],
             ["/zh/backend/python/basics.md", "基础语法"],
@@ -171,14 +138,12 @@ export default defineUserConfig({
           ],
         },
       ],
-      // AI模块
       "/zh/ai/": [
         {
-          text: "🤖 人工智能",
-          icon: "ai",
+          text: "人工智能",
           collapsible: false,
           children: [
-            ["/zh/ai/opencode/README.md", "📖 概述"],
+            ["/zh/ai/opencode/README.md", "概述"],
             "/zh/ai/opencode/",
           ],
         },
@@ -186,7 +151,6 @@ export default defineUserConfig({
       "/zh/ai/opencode/": [
         {
           text: "OpenCode",
-          icon: "opencode",
           children: [
             ["/zh/ai/opencode/intro.md", "OpenCode 介绍"],
             ["/zh/ai/opencode/installation.md", "安装配置"],
@@ -196,11 +160,9 @@ export default defineUserConfig({
           ],
         },
       ],
-      // 英文侧边栏
       "/en/": [
         {
           text: "English",
-          icon: "language",
           collapsible: false,
           children: [
             ["/en/README.md", "Home"],
@@ -213,29 +175,7 @@ export default defineUserConfig({
     },
     footer: "MIT Licensed | Copyright © 2024-present 魔法星博客",
     socialLinks: [
-      {
-        icon: "github",
-        link: "https://github.com/SetNewOne/magicStarsBlog",
-      },
+      { icon: "github", link: "https://github.com/SetNewOne/magicStarsBlog" },
     ],
-    // 页面增强配置
-    mdEnhance: {
-      align: true,
-      attrs: true,
-      container: true,
-      mark: true,
-      tasklist: true,
-      tabs: true,
-      footnote: true,
-      imageSize: true,
-      katex: true,
-      mathjax: true,
-      flowchart: true,
-      mermaid: true,
-      presentation: true,
-      sub: true,
-      sup: true,
-      vuePlayground: true,
-    },
   }),
 });
