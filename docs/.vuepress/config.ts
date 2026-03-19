@@ -34,23 +34,15 @@ export default defineUserConfig({
     colorMode: "auto",
     colorModeSwitch: true,
     
-    navbar: {
-      "/zh/": [
-        { text: "首页", link: "/zh/" },
-        { text: "前端开发", link: "/zh/frontend/" },
-        { text: "后端开发", link: "/zh/backend/" },
-        { text: "人工智能", link: "/zh/ai/" },
-        { text: "博客文章", link: "/zh/posts/" },
-        { text: "关于博主", link: "/zh/about/" },
-      ],
-      "/en/": [
-        { text: "Home", link: "/en/" },
-        { text: "Frontend", link: "/en/frontend/" },
-        { text: "Backend", link: "/en/backend/" },
-        { text: "AI", link: "/en/ai/" },
-        { text: "About", link: "/en/about/" },
-      ],
-    },
+    navbar: [
+      { text: "首页", link: "/zh/" },
+      { text: "前端开发", link: "/zh/frontend/" },
+      { text: "后端开发", link: "/zh/backend/" },
+      { text: "人工智能", link: "/zh/ai/" },
+      { text: "博客文章", link: "/zh/posts/" },
+      { text: "关于博主", link: "/zh/about/" },
+      { text: "English", link: "/en/" },
+    ],
     sidebar: {
       "/zh/frontend/": [
         {
