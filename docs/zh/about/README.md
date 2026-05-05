@@ -2,6 +2,7 @@
 title: 关于博主
 icon: person
 order: 100
+sidebar: false
 ---
 
 # 关于博主

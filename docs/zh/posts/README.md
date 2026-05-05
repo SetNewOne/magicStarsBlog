@@ -2,6 +2,7 @@
 title: 博客文章
 icon: blog
 order: 10
+sidebar: false
 ---
 
 # 博客文章

@@ -1,3 +1,8 @@
+---
+title: 部署指南
+sidebar: false
+---
+
 # 部署指南
 
 本文档介绍如何将博客部署到 Linux 服务器。
@@ -15,7 +20,7 @@ npm run dev
 npm run build
 
 # 构建输出目录
-docs/.vuepress/dist/
+.vuepress/dist/
 ```
 
 ## 服务器要求

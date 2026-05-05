@@ -1,6 +1,5 @@
 ---
 home: true
-layout: BlogHome
 icon: house
 title: Magic Stars Blog
 heroText: Magic Stars Blog

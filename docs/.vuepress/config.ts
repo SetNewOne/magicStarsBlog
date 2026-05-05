@@ -18,124 +18,131 @@ const enNavbar = [
   { text: "Chinese", link: "/zh/" },
 ];
 
+const frontendSidebar = [
+  { text: "前端开发概述", link: "/zh/frontend/" },
+  {
+    text: "HTML",
+    link: "/zh/frontend/html/",
+    prefix: "/zh/frontend/html/",
+    collapsible: true,
+    children: [
+      { text: "HTML 入门", link: "/zh/frontend/html/" },
+      { text: "基础标签", link: "/zh/frontend/html/basic-tags.md" },
+      { text: "表单", link: "/zh/frontend/html/forms.md" },
+      { text: "语义化标签", link: "/zh/frontend/html/semantic.md" },
+    ],
+  },
+  {
+    text: "CSS",
+    link: "/zh/frontend/css/",
+    prefix: "/zh/frontend/css/",
+    collapsible: true,
+    children: [
+      { text: "CSS 入门", link: "/zh/frontend/css/" },
+      { text: "选择器", link: "/zh/frontend/css/selectors.md" },
+      { text: "盒模型", link: "/zh/frontend/css/box-model.md" },
+      { text: "Flexbox 布局", link: "/zh/frontend/css/flexbox.md" },
+      { text: "Grid 布局", link: "/zh/frontend/css/grid.md" },
+      { text: "响应式设计", link: "/zh/frontend/css/responsive.md" },
+    ],
+  },
+  {
+    text: "JavaScript",
+    link: "/zh/frontend/javascript/",
+    prefix: "/zh/frontend/javascript/",
+    collapsible: true,
+    children: [
+      { text: "JavaScript 入门", link: "/zh/frontend/javascript/" },
+      { text: "基础语法", link: "/zh/frontend/javascript/basics.md" },
+      { text: "DOM 操作", link: "/zh/frontend/javascript/dom.md" },
+      { text: "事件处理", link: "/zh/frontend/javascript/events.md" },
+      { text: "ES6+ 特性", link: "/zh/frontend/javascript/es6.md" },
+      { text: "异步编程", link: "/zh/frontend/javascript/async.md" },
+      { text: "模块化", link: "/zh/frontend/javascript/modules.md" },
+    ],
+  },
+];
+
+const backendSidebar = [
+  { text: "后端开发概述", link: "/zh/backend/" },
+  {
+    text: "Java",
+    link: "/zh/backend/java/",
+    prefix: "/zh/backend/java/",
+    collapsible: true,
+    children: [
+      { text: "Java 入门", link: "/zh/backend/java/" },
+      { text: "基础语法", link: "/zh/backend/java/basics.md" },
+      { text: "面向对象", link: "/zh/backend/java/oop.md" },
+      { text: "集合框架", link: "/zh/backend/java/collections.md" },
+      { text: "Spring Boot", link: "/zh/backend/java/spring-boot.md" },
+    ],
+  },
+  {
+    text: "Python",
+    link: "/zh/backend/python/",
+    prefix: "/zh/backend/python/",
+    collapsible: true,
+    children: [
+      { text: "Python 入门", link: "/zh/backend/python/" },
+      { text: "基础语法", link: "/zh/backend/python/basics.md" },
+      { text: "数据类型", link: "/zh/backend/python/data-types.md" },
+      { text: "Web 框架", link: "/zh/backend/python/web-frameworks.md" },
+      { text: "数据分析", link: "/zh/backend/python/data-analysis.md" },
+    ],
+  },
+];
+
+const aiSidebar = [
+  { text: "人工智能概述", link: "/zh/ai/" },
+  {
+    text: "OpenCode",
+    link: "/zh/ai/opencode/",
+    prefix: "/zh/ai/opencode/",
+    collapsible: true,
+    children: [
+      { text: "OpenCode 入门", link: "/zh/ai/opencode/" },
+      { text: "OpenCode 介绍", link: "/zh/ai/opencode/intro.md" },
+      { text: "安装配置", link: "/zh/ai/opencode/installation.md" },
+      { text: "快速开始", link: "/zh/ai/opencode/quickstart.md" },
+      { text: "常用命令", link: "/zh/ai/opencode/commands.md" },
+      { text: "技能系统", link: "/zh/ai/opencode/skills.md" },
+    ],
+  },
+];
+
+const enSidebar = [
+  { text: "Home", link: "/en/" },
+  {
+    text: "Frontend",
+    link: "/en/frontend/",
+    prefix: "/en/frontend/",
+    collapsible: true,
+    children: [
+      { text: "Frontend", link: "/en/frontend/" },
+      {
+        text: "CSS",
+        link: "/en/frontend/css/",
+        prefix: "/en/frontend/css/",
+        collapsible: true,
+        children: [{ text: "CSS", link: "/en/frontend/css/" }],
+      },
+    ],
+  },
+];
+
 const sidebar = {
-  "/zh/frontend/": [
-    {
-      text: "前端开发",
-      collapsible: false,
-      children: [
-        ["/zh/frontend/README.md", "概述"],
-        "/zh/frontend/html/",
-        "/zh/frontend/css/",
-        "/zh/frontend/javascript/",
-      ],
-    },
-  ],
-  "/zh/frontend/html/": [
-    {
-      text: "HTML",
-      children: [
-        ["/zh/frontend/html/README.md", "HTML 入门"],
-        ["/zh/frontend/html/basic-tags.md", "基础标签"],
-        ["/zh/frontend/html/forms.md", "表单"],
-        ["/zh/frontend/html/semantic.md", "语义化标签"],
-      ],
-    },
-  ],
-  "/zh/frontend/css/": [
-    {
-      text: "CSS",
-      children: [
-        ["/zh/frontend/css/README.md", "CSS 入门"],
-        ["/zh/frontend/css/selectors.md", "选择器"],
-        ["/zh/frontend/css/box-model.md", "盒模型"],
-        ["/zh/frontend/css/flexbox.md", "Flexbox 布局"],
-        ["/zh/frontend/css/grid.md", "Grid 布局"],
-        ["/zh/frontend/css/responsive.md", "响应式设计"],
-      ],
-    },
-  ],
-  "/zh/frontend/javascript/": [
-    {
-      text: "JavaScript",
-      children: [
-        ["/zh/frontend/javascript/README.md", "JavaScript 入门"],
-        ["/zh/frontend/javascript/basics.md", "基础语法"],
-        ["/zh/frontend/javascript/dom.md", "DOM 操作"],
-        ["/zh/frontend/javascript/events.md", "事件处理"],
-        ["/zh/frontend/javascript/es6.md", "ES6+ 特性"],
-        ["/zh/frontend/javascript/async.md", "异步编程"],
-        ["/zh/frontend/javascript/modules.md", "模块化"],
-      ],
-    },
-  ],
-  "/zh/backend/": [
-    {
-      text: "后端开发",
-      collapsible: false,
-      children: [
-        ["/zh/backend/README.md", "概述"],
-        "/zh/backend/java/",
-        "/zh/backend/python/",
-      ],
-    },
-  ],
-  "/zh/backend/java/": [
-    {
-      text: "Java",
-      children: [
-        ["/zh/backend/java/README.md", "Java 入门"],
-        ["/zh/backend/java/basics.md", "基础语法"],
-        ["/zh/backend/java/oop.md", "面向对象"],
-        ["/zh/backend/java/collections.md", "集合框架"],
-        ["/zh/backend/java/spring-boot.md", "Spring Boot"],
-      ],
-    },
-  ],
-  "/zh/backend/python/": [
-    {
-      text: "Python",
-      children: [
-        ["/zh/backend/python/README.md", "Python 入门"],
-        ["/zh/backend/python/basics.md", "基础语法"],
-        ["/zh/backend/python/data-types.md", "数据类型"],
-        ["/zh/backend/python/web-frameworks.md", "Web 框架"],
-        ["/zh/backend/python/data-analysis.md", "数据分析"],
-      ],
-    },
-  ],
-  "/zh/ai/": [
-    {
-      text: "人工智能",
-      collapsible: false,
-      children: [
-        ["/zh/ai/opencode/README.md", "概述"],
-        "/zh/ai/opencode/",
-      ],
-    },
-  ],
-  "/zh/ai/opencode/": [
-    {
-      text: "OpenCode",
-      children: [
-        ["/zh/ai/opencode/intro.md", "OpenCode 介绍"],
-        ["/zh/ai/opencode/installation.md", "安装配置"],
-        ["/zh/ai/opencode/quickstart.md", "快速开始"],
-        ["/zh/ai/opencode/commands.md", "常用命令"],
-        ["/zh/ai/opencode/skills.md", "技能系统"],
-      ],
-    },
-  ],
-  "/en/": [
-    {
-      text: "English",
-      collapsible: false,
-      children: [
-        ["/en/README.md", "Home"],
-        ["/en/frontend/README.md", "Frontend"],
-      ],
-    },
-  ],
+  "/zh/frontend/": frontendSidebar,
+  "/zh/frontend/html/": frontendSidebar,
+  "/zh/frontend/css/": frontendSidebar,
+  "/zh/frontend/javascript/": frontendSidebar,
+  "/zh/backend/": backendSidebar,
+  "/zh/backend/java/": backendSidebar,
+  "/zh/backend/python/": backendSidebar,
+  "/zh/ai/": aiSidebar,
+  "/zh/ai/opencode/": aiSidebar,
+  "/deploy/": false,
+  "/en/": enSidebar,
 };
 
 export default defineUserConfig({
@@ -147,7 +154,23 @@ export default defineUserConfig({
     ["meta", { name: "viewport", content: "width=device-width, initial-scale=1" }],
     ["link", { rel: "icon", href: "/favicon.ico" }],
   ],
-  bundler: viteBundler(),
+  bundler: viteBundler({
+    viteOptions: {
+      build: {
+        rollupOptions: {
+          onwarn(warning, warn) {
+            if (
+              warning.message?.includes('"setupDevtoolsPlugin" is imported from external module "@vue/devtools-api" but never used')
+            ) {
+              return;
+            }
+
+            warn(warning);
+          },
+        },
+      },
+    },
+  }),
   dest: ".vuepress/dist",
   locales: {
     "/": {
