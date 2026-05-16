@@ -19,6 +19,12 @@ export const navbar: NavbarConfig = [
     activeMatch: "^/zh/backend/",
   },
   {
+    text: "数据库",
+    icon: "database",
+    link: "/zh/database/",
+    activeMatch: "^/zh/database/",
+  },
+  {
     text: "人工智能",
     icon: "ai",
     link: "/zh/ai/",
@@ -34,9 +40,5 @@ export const navbar: NavbarConfig = [
     text: "关于",
     icon: "about",
     link: "/zh/about/",
-  },
-  {
-    text: "English",
-    link: "/en/",
   },
 ];

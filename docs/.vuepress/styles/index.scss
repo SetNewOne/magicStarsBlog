@@ -56,12 +56,14 @@ body {
 .vp-sidebar,
 .theme-hope-sidebar,
 .sidebar-mask + .vp-sidebar {
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(10px);
-  border: var(--vp-panel-border);
-  box-shadow: var(--vp-panel-shadow);
-  border-radius: 20px;
-  margin: 1rem 0 1rem 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+  border-radius: 14px;
+  margin: 0.85rem 0 0.85rem 0.85rem;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
 }
 
 .sidebar .sidebar-link,
@@ -92,8 +94,8 @@ body {
 .vp-sidebar .vp-sidebar-header,
 .theme-hope-sidebar .vp-sidebar-header {
   width: 100%;
-  margin: 0;
-  padding: 0.75rem 0.95rem 0.45rem;
+  margin: 0.18rem 0;
+  padding: 0.7rem 0.85rem;
   border-radius: 14px;
   color: #0f172a;
   font-weight: 800;
@@ -101,6 +103,7 @@ body {
   letter-spacing: 0.01em;
   background: transparent;
   box-sizing: border-box;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .vp-sidebar .vp-sidebar-header.clickable,
@@ -111,6 +114,8 @@ body {
 .vp-sidebar .vp-sidebar-header.clickable:hover,
 .theme-hope-sidebar .vp-sidebar-header.clickable:hover {
   background: rgba(15, 118, 110, 0.08);
+  color: #0f766e;
+  box-shadow: inset 0 0 0 1px rgba(15, 118, 110, 0.08);
 }
 
 .vp-sidebar .vp-sidebar-header .vp-arrow,
@@ -118,9 +123,35 @@ body {
   font-size: 1.2rem;
 }
 
+.vp-sidebar .vp-sidebar-header .vp-sidebar-link,
+.theme-hope-sidebar .vp-sidebar-header .vp-sidebar-link,
+.vp-sidebar .vp-sidebar-header a,
+.theme-hope-sidebar .vp-sidebar-header a {
+  display: inline;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: inherit;
+  font: inherit;
+}
+
+.vp-sidebar .vp-sidebar-header .vp-sidebar-link:hover,
+.theme-hope-sidebar .vp-sidebar-header .vp-sidebar-link:hover,
+.vp-sidebar .vp-sidebar-header a:hover,
+.theme-hope-sidebar .vp-sidebar-header a:hover,
+.vp-sidebar .vp-sidebar-header .route-link-active,
+.theme-hope-sidebar .vp-sidebar-header .route-link-active {
+  background: transparent;
+  box-shadow: none;
+  color: inherit;
+}
+
 .vp-sidebar .vp-sidebar-group > .vp-sidebar-links,
 .theme-hope-sidebar .vp-sidebar-group > .vp-sidebar-links {
-  margin: 0.2rem 0 0.8rem 0.85rem;
+  margin: 0.1rem 0 0.8rem 0.85rem;
   padding: 0.25rem 0 0.15rem 0.85rem;
   border-inline-start: 1px solid rgba(15, 118, 110, 0.14);
 }
@@ -164,7 +195,7 @@ body {
   padding: 0.7rem 0.95rem;
   font-weight: 600;
   color: #334155;
-  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .sidebar .sidebar-link:hover,
@@ -174,7 +205,6 @@ body {
 .theme-hope-sidebar a:hover {
   color: #0f766e;
   box-shadow: inset 0 0 0 1px rgba(15, 118, 110, 0.08);
-  transform: translateX(2px);
 }
 
 .sidebar .sidebar-item.active > .sidebar-link,
@@ -185,10 +215,10 @@ body {
 .theme-hope-sidebar .sidebar-link.active,
 .vp-sidebar .route-link-active,
 .theme-hope-sidebar .route-link-active {
-  background: linear-gradient(135deg, rgba(15, 118, 110, 0.16), rgba(14, 165, 233, 0.12));
+  background: rgba(15, 118, 110, 0.12);
   color: #0f766e;
   font-weight: 700;
-  box-shadow: inset 0 0 0 1px rgba(15, 118, 110, 0.12), 0 8px 18px rgba(15, 23, 42, 0.06);
+  box-shadow: inset 0 0 0 1px rgba(15, 118, 110, 0.14);
 }
 
 .sidebar .sidebar-item:not(.active) > .sidebar-link::before,
@@ -197,9 +227,9 @@ body {
 .theme-hope-sidebar a::before {
   content: "";
   display: inline-block;
-  width: 0.38rem;
-  height: 0.38rem;
-  margin-right: 0.7rem;
+  width: 0.42rem;
+  height: 0.42rem;
+  margin-right: 0.68rem;
   border-radius: 999px;
   vertical-align: middle;
   background: linear-gradient(135deg, rgba(15, 118, 110, 0.55), rgba(14, 165, 233, 0.55));
@@ -212,13 +242,13 @@ body {
 .theme-hope-sidebar .route-link-active::before {
   content: "";
   display: inline-block;
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.42rem;
+  height: 0.42rem;
   margin-right: 0.68rem;
   border-radius: 999px;
   vertical-align: middle;
   background: linear-gradient(135deg, #0f766e, #0284c7);
-  box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.12);
+  box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.09);
 }
 
 .theme-hope-content {

@@ -21,6 +21,10 @@ features:
     icon: server
     details: 包含 Java、Python 与常见服务端能力建设内容。
     link: /zh/backend/
+  - title: 数据库
+    icon: database
+    details: 整理 MySQL、Oracle、SQL Server 的基础语法、常用函数和实用技巧。
+    link: /zh/database/
   - title: 人工智能
     icon: microchip
     details: 聚焦 OpenCode、工作流与 AI 工具的落地使用。
@@ -38,6 +42,7 @@ footer: MIT Licensed | Copyright © 2024-present 魔法星博客
 
 - [前端开发](/zh/frontend/)
 - [后端开发](/zh/backend/)
+- [数据库](/zh/database/)
 - [人工智能](/zh/ai/)
 - [博客文章](/zh/posts/)
 - [关于博主](/zh/about/)

@@ -2,6 +2,7 @@
 home: true
 icon: house
 title: 魔法星博客
+redirectTo: /zh/
 heroText: 魔法星博客
 tagline: 把前端、后端与 AI 学习内容整理成长期可维护的知识库
 heroImage: /images/logo.svg
