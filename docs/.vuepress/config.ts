@@ -255,6 +255,7 @@ const databaseSidebar = [
 
 const aiSidebar = [
   { text: "人工智能概述", link: "/zh/ai/" },
+  { text: "CC Switch", link: "/zh/ai/cc-switch.md" },
   {
     text: "OpenCode",
     link: "/zh/ai/opencode/",
@@ -366,6 +367,23 @@ export default defineUserConfig({
     displayFooter: true,
     colorMode: "auto",
     colorModeSwitch: true,
+    plugins: {
+      search: {
+        hotKeys: [
+          { key: "k", ctrl: true },
+          { key: "/", ctrl: true },
+        ],
+        maxSuggestions: 24,
+        getExtraFields: (page) => [
+          page.contentRendered
+            .replace(/<script[\s\S]*?<\/script>/gi, " ")
+            .replace(/<style[\s\S]*?<\/style>/gi, " ")
+            .replace(/<[^>]*>/g, " ")
+            .replace(/\s+/g, " ")
+            .trim(),
+        ],
+      },
+    },
     locales: {
       "/": {
         navbar: zhNavbar,

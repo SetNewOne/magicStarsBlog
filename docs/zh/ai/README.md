@@ -4,12 +4,14 @@
 
 ## 学习模块
 
+- [CC Switch 说明文档与操作指南](/zh/ai/cc-switch.md)
 - [OpenCode 入门](/zh/ai/opencode/)
 
 ## 模块说明
 
 当前 AI 栏目主要聚焦以下内容：
 
+- CC Switch 的安装准备、功能范围与操作指南
 - OpenCode 的基础概念与使用方式
 - 安装配置与快速开始
 - 常用命令与技能系统

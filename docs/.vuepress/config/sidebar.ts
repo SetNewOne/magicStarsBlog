@@ -241,6 +241,8 @@ export const sidebar: SidebarConfig = {
       icon: "ai",
       collapsible: false,
       children: [
+        "/zh/ai/README.md",
+        "/zh/ai/cc-switch.md",
         {
           text: "OpenCode",
           link: "/zh/ai/opencode/",
