@@ -1,5 +1,5 @@
 <template>
-  <div class="custom-search">
+  <div v-if="mounted" class="custom-search">
     <button class="custom-search-trigger" type="button" aria-label="打开搜索" @click="openModal">
       <span class="custom-search-trigger-icon" aria-hidden="true"></span>
       <span class="custom-search-trigger-text">搜索</span>
@@ -79,6 +79,7 @@ type SearchPage = {
 };
 
 const maxResults = 24;
+const mounted = ref(false);
 const isOpen = ref(false);
 const query = ref("");
 const focusIndex = ref(0);
@@ -227,6 +228,7 @@ const onKeydown = (event: KeyboardEvent) => {
 };
 
 onMounted(() => {
+  mounted.value = true;
   window.addEventListener("keydown", onKeydown);
 });
 
